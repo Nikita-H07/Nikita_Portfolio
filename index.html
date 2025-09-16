@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nikita H | Aspiring Data Analyst</title>
+  
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/devicon/devicon.min.css" />
+  
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <h1>Portfolio</h1>
+
+      <!-- Desktop Navigation -->
+      <ul class="nav-links">
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#tech-stack">Tech Stack</a></li>
+        <li><a href="#projects">Projects</a></li>
+      </ul>
+
+      <!-- Mobile Menu Toggle -->
+      <div class="mobile-menu">
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+        <div class="dropdown">
+          <a href="#about">About Me</a>
+          <a href="#tech-stack">Tech Stack</a>
+          <a href="#projects">Projects</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero" data-aos="fade-up">
+    <img src="assets/harshad.jpg" alt="Harshad Profile" class="profile-img" data-aos="zoom-in" data-aos-delay="200" />
+    <h1 data-aos="fade-right" data-aos-delay="400">Hi, I'm Nikita.</h1>
+
+    <p data-aos="fade-left" data-aos-delay="600">Aspiring Data Analyst | Data Visualization & Business Insights | Cloud Computings</p>
+    <a href="https://github.com/Harshad03-GN/Harshad_Portfolio/raw/main/resume.pdf"
+   class="btn"
+   data-aos="zoom-in"
+   data-aos-delay="800"
+   download="Harshad_Resume.pdf">
+   view Resume
+</a>
+
+  </section>
+
+  <section id="about" class="about" data-aos="fade-up" data-aos-delay="1000">
+    <h2>About Me</h2>
+    <p> I’m a motivated and detail-oriented individual with a passion for data analytics and problem-solving. Skilled in Python, SQL, and Power BI, I enjoy uncovering insights from data and transforming them into actionable solutions.</p>
+  </section>
+
+  <section id="tech-stack" class="tech-stack" data-aos="fade-up" data-aos-delay="1200">
+    <h2>Tech Stack</h2>
+    <div class="icons">
+      <i class="devicon-python-plain colored"></i>
+      <i class="devicon-amazonwebservices-plain colored"></i> 
+      <i class="devicon-azure-plain colored"></i>
+      <i class="devicon-docker-plain colored"></i>
+      <i class="devicon-github-original colored"></i>
+      <i class="devicon-linux-plain colored"></i>
+      <i class="devicon-javascript-plain colored"></i>
+    </div>
+  </section>
+
+  <section id="projects" class="projects" data-aos="fade-up" data-aos-delay="1400">
+    <h2>Projects</h2>
+    <div class="project-card">
+      <h3>Real-Time Weather Monitoring Dashboard with Alerts</h3>
+      <p>A Flask-based weather monitoring web application that fetches real-time weather data using the OpenWeatherMap API, displays it via a user-friendly interface, stores history in Azure Blob Storage, and enables users to view past weather records. Deployed and monitored via Azure Cloud.</p>
+      <a href="https://github.com/Harshad03-GN/ImageResizerProject" target="_blank" rel="noopener noreferrer">View GitHub</a>
+    </div>
+    <div class="project-card">
+      <h3>Image Resizer with Azure</h3>
+      <p>Python app to resize images and store them on Azure Blob Storage. Integrated with GitHub Actions for CI.</p>
+      <a href="https://github.com/Harshad03-GN/Weather-Monitoring" target="_blank" rel="noopener noreferrer">View GitHub</a>
+    </div>
+    <div class="project-card">
+      <h3>CI/CD for Flask App</h3>
+      <p>Built a CI/CD pipeline using GitHub Actions, Docker, and deployed on Azure Web Apps.</p>
+      <a href="https://github.com/Harshad03-GN/flask-devops-app" target="_blank" rel="noopener noreferrer">View GitHub</a>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  </script>
+
+  <script src="script.js"></script>
+
+  <script>
+    // Sticky header hide/show on scroll
+    let lastScrollTop = 0;
+    const header = document.querySelector("header");
+
+    window.addEventListener("scroll", () => {
+      let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+      if (currentScroll > lastScrollTop) {
+        // Scrolling down
+        header.style.transform = "translateY(-100%)";
+      } else {
+        // Scrolling up
+        header.style.transform = "translateY(0)";
+      }
+
+      lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+    });
+
+    // Close mobile menu after clicking a dropdown link
+    document.querySelectorAll('.dropdown a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('menu-toggle').checked = false;
+      });
+    });
+  </script>
+  <footer>
+  <h2 class="footer-heading">Contact Me</h2>
+
+  <div class="footer-content">
+    <div class="footer-left">
+        <p>Mobile: +91 8951071289</p>
+      
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/harshad-naik-527819249" target="_blank">Harshad-Naik</a></p>
+    </div>
+
+    <div class="footer-right">
+      <p>Email: <a href="mailto:nharshad26@outloo.com">nharshad26@outloo.com</a></p>
+      <p>GitHub: <a href="https://github.com/Harshad03-GN" target="_blank">Harshad03-GN</a></p>
+    </div>
+  </div>
+
+  <p class="footer-bottom">&copy; 2025 Harshad. All rights reserved.</p>
+</footer>
+
+
+</body>
+</html>
